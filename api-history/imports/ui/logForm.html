@@ -1,0 +1,35 @@
+<template name="addLogForm">
+  <form class="new-log">
+    <fieldset>
+    <legend>Add New Entry</legend>
+        <div>
+          <label>
+            Name:
+            <input type="text" name="name" placeholder="e.g. Client 823" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Endpoint:
+            <input type="text" name="endpoint" placeholder="e.g. /employees" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Result:
+            <input type="text" name="result" placeholder="e.g. Success" />
+          </label>
+        </div>
+        <div>
+          <input class="btn" type="submit" value="Submit Entry">
+        </div>
+    </fieldset>
+  </form>
+</template>
+
+<template name="log">
+  <td>{{name}} </td>
+  <td>{{timestamp}} </td>
+  <td>{{endpoint}} </td>
+  <td>{{result}} </td>
+</template>

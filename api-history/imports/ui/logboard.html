@@ -1,0 +1,32 @@
+<template name="logboard">
+  <table>
+    {{#if Template.subscriptionsReady}}
+      <tr>
+        <td> NAME </td>
+        <td>CREATED AT</td>
+        <td>ENDPOINT</td>
+        <td>RESULT</td>
+      </tr>
+      {{#each logs}}
+      <tr>
+        {{> log}}
+      </tr>
+      {{/each}}
+      {{#if hasMorePosts}}
+        <a class="load-more" href="#">Load More</a>
+      {{/if}}
+    {{else}}
+      <tr>
+        <h2> Loading history... </h2>
+      </tr>
+    {{/if}}
+  </table>
+  <!-- </ul> -->
+  <div>
+    <!-- <button type="submit" class="load-more" value="Load More"> -->
+    <button class="btn load-more">Load More</button>
+  </div>
+  <div>
+    <button class="btn fetch-new">See Newest Logs </button>
+  </div>
+</template>
